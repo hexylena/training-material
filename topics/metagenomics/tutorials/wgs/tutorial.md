@@ -4,6 +4,7 @@ topic_name: metagenomics
 tutorial_name: wgs
 ---
 
+
 # Introduction
 
 In metagenomics, information about micro-organisms in an environment can be extracted with two main techniques:
