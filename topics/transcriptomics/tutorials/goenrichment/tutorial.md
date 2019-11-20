@@ -10,7 +10,7 @@ objectives:
   - "How to interpret and simplify the results"
 time_estimation: "1h"
 key_points:
-  - "The goenrichment tool can be used to perform GO Enrichment analysis"
+  - "The goenrichment tool can be used trm GO Enrichment analysis"
   - "One needs to be careful when chosing the background population"
   - "There are several methods to simplify the output of the GO Enrichment analysis"
 contributors:
