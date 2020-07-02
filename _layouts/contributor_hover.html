@@ -1,0 +1,20 @@
+---
+layout: base
+---
+
+{% assign contributors = site.data['contributors'] %}
+
+<h3>
+	{{ contributors[page.contributor].name | default: page.contributor }}
+</h3>
+
+{% if contributors[page.contributor].github != false %}
+	<a href="https://github.com/{{ page.contributor }}" class="thumbnail">
+		<img src="https://avatars.githubusercontent.com/{{ page.contributor }}" alt="{{ page.contributor }}" >
+	</a>
+{% else %}
+	<span class="thumbnail">
+		<img src="https://avatars.githubusercontent.com/{{ page.contributor }}" alt="{{ page.contributor }}" >
+	</span>
+{% endif %}
+
