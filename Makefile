@@ -52,23 +52,23 @@ serve: ## run a local server (You can specify PORT=, HOST=, and FLAGS= to set th
 	@echo "Tip: Want faster builds? Use 'serve-quick' in place of 'serve'."
 	@echo "Tip: to serve in incremental mode (faster rebuilds), use the command: make serve FLAGS=--incremental" && echo "" && \
 	$(ACTIVATE_ENV) && \
-		mv Gemfile Gemfile.backup || true && \
-		mv Gemfile.lock Gemfile.lock.backup || true && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile Gemfile.backup; fi && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile.lock Gemfile.lock.backup; fi && \
 		${JEKYLL} serve --strict_front_matter -d _site/training-material -P ${PORT} -H ${HOST} ${FLAGS}
 .PHONY: serve
 
 serve-quick: ## run a local server (faster, some plugins disabled for speed)
 	@echo "This will build the website with citations and other content disabled, and incremental on by default. To run the full preview (slower), use make serve" && echo "" && \
 	$(ACTIVATE_ENV) && \
-		mv Gemfile Gemfile.backup || true && \
-		mv Gemfile.lock Gemfile.lock.backup || true && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile Gemfile.backup; fi && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile.lock Gemfile.lock.backup; fi && \
 		${JEKYLL} serve --strict_front_matter -d _site/training-material --incremental --config _config.yml,_config-dev.yml -P ${PORT} -H ${HOST} ${FLAGS}
 .PHONY: serve-quick
 
 build: clean ## build files but do not run a server (You can specify FLAGS= to pass additional flags to Jekyll)
 	$(ACTIVATE_ENV) && \
-		mv Gemfile Gemfile.backup || true && \
-		mv Gemfile.lock Gemfile.lock.backup || true && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile Gemfile.backup; fi && \
+		if [[ ! -z "$$CONDA_EXE" ]]; then mv Gemfile.lock Gemfile.lock.backup; fi && \
 		JEKYLL_ENV=${ENV} ${JEKYLL} build --strict_front_matter -d _site/training-material ${FLAGS}
 .PHONY: build
 
