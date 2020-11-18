@@ -42,10 +42,10 @@ Species-Population. Only the last tool to create a plot from your GLM results is
 two parts of this workflow. Thus, in this tutorial, we'll start by the Community analysis followed
 by the Species-Population analysis.
 
-> ### {% icon details %} Ecological definitions of "Population" and Community
+> ### {% icon details %} "Population" vs "Community"
 > 
-> "Population": group of individuals of the same species interacting with each other.
-> Community: group of several species interacting with each other. 
+> - "Population": group of individuals of the same species interacting with each other.
+> - "Community": group of several species interacting with each other. 
 > 
 {: .details}
 
@@ -111,7 +111,9 @@ This first step consist of downloading and properly prepare the data to use it i
 > 2. Import the CSV files from [Zenodo](https://doi.org/10.5281/zenodo.4264936) or from the shared data 
 >    library or directly from DATRAS data portal
 >    ```
->    https://doi.org/10.5281/zenodo.4264936
+>    https://zenodo.org/record/4264936/files/CPUE%20per%20length%20per%20area_A.csv
+>    https://zenodo.org/record/4264936/files/CPUE%20per%20length%20per%20area_B.csv
+>    https://zenodo.org/record/4264936/files/CPUE%20per%20length%20per%20area_C.csv
 >    ```
 >
 >    {% include snippets/import_via_link.md %} 
@@ -123,7 +125,7 @@ This first step consist of downloading and properly prepare the data to use it i
 >
 >    > ### {% icon tip %} Tip: Importing data from DATRAS data portal
 >    >
->    > * Go to link: https://datras.ices.dk/Data_products/Download/Download_Data_public.aspx 
+>    > * Go to [their website](https://datras.ices.dk/Data_products/Download/Download_Data_public.aspx)
 >    > * In the field 'Data products' choose 'CPUE per length per area' 
 >    > * In the field 'Survey' choose the survey(s) of interest. Here, we chose to use 'EVHOE', 'BITS' 
 >    >   and 'SWC-IBTS' surveys, you'll have to repeat the six following steps for each of the 3 surveys
