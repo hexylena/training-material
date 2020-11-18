@@ -32,11 +32,16 @@ tutorials = findTutorials("topics", "tutorial.md").map(tuto => {
 	const result = metadataParser(contents);
 	result.metadata.id = tuto;
 	result.metadata.content = result.content;
+	filtered = result.content.split('\n')
+		.filter(x => x[0] !== '>') // Remove boxes
+		.filter(x => x[0] !== '{') // remove closing tag
+		.slice(0, 25) // first 25 lines
+		.join('\n')
 
 	output = {
 		id: tuto,
 		title: result.metadata.title,
-		content: result.content
+		content: filtered,
 	};
 
 	// Array style properties
@@ -45,7 +50,7 @@ tutorials = findTutorials("topics", "tutorial.md").map(tuto => {
 			output[prop] = result.metadata[prop].join(" ");
 		}
 	});
-	return result.metadata;
+	return output;
 });
 
 var idx = lunr(function() {
