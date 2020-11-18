@@ -459,14 +459,14 @@ of ```Site``` to take geographical pseudo-replication into account.
 
 ## Compute GLMMs and create plots on Community metrics
 
-For the Community analysis we have the choice to test the effect of ```Year``` and ```Site``` on: 
- - "Total abundance"
- - or "Species richness"
- - or "Simpson index"
- - or "1 - Simpson index"
- - or "Shannon index"
- - or "Pielou index" 
- - or "Hill index"
+For the Community analysis we have the choice to test the effect of ```Year``` and ```Site``` on any of the following: 
+ - Total abundance
+ - Species richness
+ - Simpson index
+ - 1 - Simpson index
+ - Shannon index
+ - Pielou index 
+ - Hill index
 
 We choose to take "Species richness" as the interest variable, namely the quantity of different species 
 at a given time and location. This metric is located on the fourth column of the `#Concatenate #Community` 
@@ -484,12 +484,12 @@ As said above, analyses will be separated by the field "Survey" (first column) t
 >     - {% icon param-select %} *"Random effect?"*: `Site`
 >     - {% icon param-select %} *"Specify advanced parameters"*: `No, use program defaults`
 >
-> The three outputs must have three tags `#Concatenate #Community #unitobs` and the first one named 'GLM - results 
-> from your community analysis' must contain five lines. This file is formated to have one line per GLM processed,
-> it has been formated this way to make GLM results easier to represent and modify if needed. However, this format is 
-> often not suited to read directly the results on Galaxy as Galaxy handles better tabular files with a lot of lines
-> rather than files with a lot of columns. So, if your file doesn't display properly on Galaxy as a data table, we advise
-> to do the following optional step.
+>     The three outputs must have three tags `#Concatenate #Community #unitobs` and the first one named 'GLM - results 
+>     from your community analysis' must contain five lines. This file is formated to have one line per GLM processed,
+>     it has been formated this way to make GLM results easier to represent and modify if needed. However, this format is 
+>     often not suited to read directly the results on Galaxy as Galaxy handles better tabular files with a lot of lines
+>     rather than files with a lot of columns. So, if your file doesn't display properly on Galaxy as a data table, we advise
+>     to do the following optional step.
 >
 > 2. (optional) {% tool  [Transpose rows/columns in a tabular file](toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0) %} 
 >     with `#Concatenate #Community #unitobs` 'GLM - results from your community analysis' data file
@@ -709,7 +709,7 @@ Species-Population metrics data file.
 ### Read and interpret raw GLM outputs
 
 The three outputs for each time the population GLM tool runs are the same as in the community GLM tool described in
-the previous part 3. 1. 1. Read and interpret raw GLM outputs. 
+the previous part, ["Compute GLMMs and create plots on Community metrics"](#compute-glmms-and-create-plots-on-community-metrics). Read and interpret raw GLM outputs. 
 For the need of this tutorial, we'll be analyzing only the `BITS` survey analysis results.
 
 #### First output: 'GLM - results from your population analysis'
@@ -724,7 +724,7 @@ We also see the `Gaussian` distribution has been automatically selected by the t
 "Abundance" is usually a count, here it is a Catch Per Unit Effort abundance so it isn't a round value.
 
 Then, the details of what contains each field in this file has been developped in the previous part on community analyses 
-3. 1. 1. 1. First output: 'GLM - results from your community analysis'.
+[First output: 'GLM - results from your community analysis'](#first-output-glm---results-from-your-community-analysis).
 
 Three statistics about the random effect ```site``` are given in this first file: standard deviation, number of observations taken
 into account in the model and number of levels in the random effect. 
