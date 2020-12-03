@@ -138,6 +138,10 @@ bgruening:
     linkedin: bgruening
     joined: 2017-09
 
+bksanders:
+    name: Bazante Sanders
+    joined: 2020-12
+
 blankclemens:
     name: Clemens Blank
     email: blankclemens@gmail.com
@@ -460,17 +464,17 @@ malloryfreeberg:
 manabuishii:
     name: Manabu ISHII
     joined: 2017-09
-    
+
 mariecrane:
     name: Marie Crane
-    joined: 2019-05 
-    email: crane136@umn.edu 
+    joined: 2019-05
+    email: crane136@umn.edu
 
 martenson:
     name: Martin Čech
     email: marten@bx.psu.edu
     joined: 2017-09
-    
+
 MarenStillger:
     name: Maren Stillger
     joined: 2020-10
@@ -495,6 +499,11 @@ mccalluc:
 melpetera:
     name: Mélanie Petera
     joined: 2019-06
+
+miaomiaozhou88:
+    name: Miaomiao Zhou
+    email: m.zhou1@avans.nl
+    joined: 2020-12
 
 michelemaroni89:
     name: Michele Maroni
