@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 ---
-title: "Galaxy Training!"
+title: "Galaxy Training! [DEVELOPMENT ONLY]"
 email: galaxytrainingnetwork@gmail.com
 description: A collection of tutorials generated and maintained by Galaxy Community Members across the world
 url: "https://training.galaxyproject.org"
