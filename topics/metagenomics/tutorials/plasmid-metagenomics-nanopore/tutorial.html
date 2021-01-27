@@ -5,6 +5,10 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Antibiotic resistance detection</title>
+        
+            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
@@ -237,7 +241,7 @@
   "name": "Hands-on for 'Antibiotic resistance detection' tutorial",
   "url": "https://training.galaxyproject.org//training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html",
   "timeRequired": "PT3H",
-  "keywords": "nanopore, plasmids",
+  "keywords": "nanopore, plasmids, assembly, amr",
   "description": "The questions this  addresses are:\n - How do I assemble a genome with Nanopore data?\n - How do I get more information about the structure of the genomes?\n - How do I get more information about the antimicrobial resistance genes?\n\n\\nThe objectives are:\n - Perform Quality control on your reads\n - Assemble a genome with Minimap2/Miniasm/Racon\n - Determine the structure of the genome(s)\n - Scan for antimicrobial resistance genes with Staramr\n\n",
   "coursePrerequisites": [
     {
@@ -572,7 +576,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 7, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jan 27, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -599,7 +603,7 @@
 <p>In this tutorial we will recreate the analysis described in the paper by <a class="citation" href="#LiXie2018">Li <i>et al.</i> 2018</a> entitled <em>Efficient generation of complete sequences of MDR-encoding plasmids by rapid assembly of MinION barcoding sequencing data</em>. We will use data sequenced by the <a href="https://nanoporetech.com/">Nanopore</a> MinION sequencer.</p>
 
 <p>The assembly will be performed with <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2018">Li 2018</a>),
-<strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>), <strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Vaser2017">Vaser <i>et al.</i> 2017</a>) and <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2017">Wick <i>et al.</i> 2017</a>).
+<strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>), <strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Vaser2017">Vaser <i>et al.</i> 2017</a>) and <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2017">Wick <i>et al.</i> 2017</a>).
 The <span class="notranslate">downstream</span> analysis will use <strong>Nanoplot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#DeCoster2018">Coster <i>et al.</i> 2018</a>),
 <strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2015">Wick <i>et al.</i> 2015</a>), <strong>PlasFlow</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Krawczyk2018">Krawczyk <i>et al.</i> 2018</a>) and <strong>starmr</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a href="https://github.com/phac-nml/staramr">GitHub</a>).</p>
 
@@ -671,8 +675,19 @@ We will use the plasmid dataset created by <a class="citation" href="#LiXie2018"
     <li>Long-read sequencing makes it possible to <strong>identify large structural variations</strong></li>
   </ol>
 
-  <figure id="figure-1"><img src="../../images/plasmid-metagenomics-nanopore/sequence_method.jpg" alt="How nanopore sequencing works" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Using nanopore sequencing, a single molecule of <span class="notranslate">DNA</span> or <span class="notranslate">RNA</span> can be sequenced without the need for PCR amplification or chemical labeling of the sample. (Image from: <a href="https://nanoporetech.com/sites/default/files/s3/white-papers/WGS_Assembly_white_paper.pdf?submissionGuid=40a7546b-9e51-42e7-bde9-b5ddef3c3512">Nanopore sequencing: The advantages of long <span class="notranslate">reads</span> for genome assembly</a>)</figcaption></figure>
-  <p><br /><br /></p>
+  <p><img src="/training-material/topics/metagenomics/images/plasmid-metagenomics-nanopore/sequence_method.jpg" alt="How nanopore sequencing works" title="Using nanopore sequencing, a single molecule of DNA or RNA can be sequenced without the need for PCR amplification or chemical labeling of the sample. (Image from: &lt;a href=&quot;https://nanoporetech.com/sites/default/files/s3/white-papers/WGS_Assembly_white_paper.pdf?submissionGuid=40a7546b-9e51-42e7-bde9-b5ddef3c3512&quot;&gt;Nanopore sequencing: The advantages of long reads for genome assembly&lt;/a&gt;)" /> <br /><br /></p>
+
+  <p>When using Oxford Nanopore Technologies (ONT) sequencing, the change in
+electrical current is measured over the membrane of a flow cell. When
+nucleotides pass the pores in the flow cell the current change is translated
+(basecalled) to nucleotides by a basecaller. A schematic overview is given in
+the picture above.</p>
+
+  <p>When sequencing using a MinIT or MinION Mk1C, the basecalling software is
+present on the devices. With basecalling the electrical signals are translated
+to bases (A,T,G,C) with a quality score per base. The sequenced <span class="notranslate">DNA</span> strand will
+be basecalled and this will form one read. Multiple <span class="notranslate">reads</span> will be stored in a
+fastq file.</p>
 
 </blockquote>
 
@@ -959,7 +974,7 @@ channel_100_69f2ea89-01c5-45f4-8e1b-55a09acdb3f5_template	4518	251	1328	+	channe
 
 <h2 id="ultrafast-de-novo-assembly-using-miniasm">Ultrafast de novo assembly using Miniasm</h2>
 
-<p>The mapped <span class="notranslate">reads</span> are ready to be assembled with <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>). Miniasm is a very fast Overlap Layout Consensus based de-novo assembler for noisy long <span class="notranslate">reads</span>.
+<p>The mapped <span class="notranslate">reads</span> are ready to be assembled with <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>). Miniasm is a very fast Overlap Layout Consensus based de-novo assembler for noisy long <span class="notranslate">reads</span>.
 It takes all-vs-all read self-<span class="notranslate">mapping</span>s (typically by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>) as input and outputs an assembly graph in the GFA format.</p>
 
 <p>Different from mainstream assemblers, miniasm does not have a consensus step.
@@ -967,7 +982,7 @@ It simply concatenates pieces of read sequences to generate the final sequences.
 The optimal case would be to recreate a complete chromosome or plasmid.
 Thus the per-base error rate is similar to the raw input <span class="notranslate">reads</span>.</p>
 
-<figure id="figure-2"><img src="../../images/plasmid-metagenomics-nanopore/Miniasm.png" alt="Pairwise alignment" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Sequencing and Assembly Schematic. A longer sequence is constructed from many smaller, overlapping fragments. These are aligned and reconstructed during assembly to produce the best guess assembly.</figcaption></figure>
+<figure id="figure-1"><img src="../../images/plasmid-metagenomics-nanopore/Miniasm.png" alt="Pairwise alignment" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Sequencing and Assembly Schematic. A longer sequence is constructed from many smaller, overlapping fragments. These are aligned and reconstructed during assembly to produce the best guess assembly.</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-de-novo-assembly"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: De novo assembly</h3>
@@ -1103,7 +1118,7 @@ AATGCAGCTATGGCGCGTGCGGTGCCAAGAAAGCCCGCAGATATTCCGCTTCCTCGCTCATT [..]
 <p>To get a sense of how well our data was assembled, and to determine whether the contigs are chomosomal or plasmid <span class="notranslate">DNA</span> (the former being linear sequences while plasmids are circular molecules), <strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> can give a clear view of the assembly.</p>
 
 <p><strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2015">Wick <i>et al.</i> 2015</a>) (a <strong>B</strong>ioinformatics <strong>A</strong>pplication for <strong>N</strong>avigating <strong>D</strong>e novo <strong>A</strong>ssembly <strong>G</strong>raphs <strong>E</strong>asily), is a program that creates visualisations of assembly graphs.
-Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>), <strong>Velvet</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Zerbino2008">Zerbino and Birney 2008</a>), <strong>SPAdes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Bankevich2012">Bankevich <i>et al.</i> 2012</a>), <strong>Trinity</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Grabherr2011">Grabherr <i>et al.</i> 2011</a>) and <strong>MEGAHIT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <a class="citation" href="#Li2015">Li <i>et al.</i> 2015</a>) carry out assembly by building a graph, from which contigs are generated.</p>
+Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>), <strong>Velvet</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Zerbino2008">Zerbino and Birney 2008</a>), <strong>SPAdes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Bankevich2012">Bankevich <i>et al.</i> 2012</a>), <strong>Trinity</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Grabherr2011">Grabherr <i>et al.</i> 2011</a>) and <strong>MEGAHIT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <a class="citation" href="#Li2015">Li <i>et al.</i> 2015</a>) carry out assembly by building a graph, from which contigs are generated.</p>
 
 <p>By visualizing these assembly graphs, Bandage allows users to better understand, troubleshoot, and improve the assemblies.</p>
 
@@ -1139,7 +1154,7 @@ This is not the case for most of the samples, but we will improve our assemblies
 
 <p>For example, the assembly for sample RB01 looks something like this (your assembly will look a bit different due to randomness in several of the tools):</p>
 
-<figure id="figure-3"><img src="../../images/plasmid-metagenomics-nanopore/bandage_pre_unicycler.png" alt="Bandage output for sample RB01" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Bandage output for sample RB01. Large fragments were assembled, but not the full circular plasmid molecules.</figcaption></figure>
+<figure id="figure-2"><img src="../../images/plasmid-metagenomics-nanopore/bandage_pre_unicycler.png" alt="Bandage output for sample RB01" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Bandage output for sample RB01. Large fragments were assembled, but not the full circular plasmid molecules.</figcaption></figure>
 
 <p>As you can see from these Bandage outputs, we were able to assemble our data into fairly large fragments, but were not quite successful in assembling the full (circular) plasmid sequences.</p>
 
@@ -1364,7 +1379,7 @@ and compiles a summary report of detected antimicrobial resistance genes.</p>
 <h2 id="card-database">CARD database</h2>
 <p>To get more information about these antibiotic resistant genes, you can check the <a href="https://card.mcmaster.ca">CARD database</a> (<strong>C</strong>omprehensive <strong>A</strong>ntibiotic <strong>R</strong>esistance <strong>D</strong>atabase) (<a class="citation" href="#Jia2016">Jia <i>et al.</i> 2016</a>)</p>
 
-<figure id="figure-4"><img src="../../images/plasmid-metagenomics-nanopore/card_database.png" alt="Screenshot of the CARD database" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Screenshot of the CARD database interface. CARD gives information about the antibiotic resistance genes, as well as links to relevant publications.</figcaption></figure>
+<figure id="figure-3"><img src="../../images/plasmid-metagenomics-nanopore/card_database.png" alt="Screenshot of the CARD database" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Screenshot of the CARD database interface. CARD gives information about the antibiotic resistance genes, as well as links to relevant publications.</figcaption></figure>
 
 <blockquote class="question">
   <h3 id="question-question-6"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
@@ -1513,7 +1528,20 @@ may provide further insight.</p>
     
 
 </li>
-<li><span id="Li2015">Li, D., C.-M. Liu, R. Luo, K. Sadakane, and T.-W. Lam, 2015 <b>MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph</b>. Bioinformatics 31: 1674–1676.</span>
+<li><span id="Li2015">Li, M., R. Schröder, S. Ni, B. Madea, and M. Stoneking, 2015 <b>Extensive tissue-related and allele-related mtDNA heteroplasmy suggests positive selection for somatic mutations</b>. Proceedings of the National Academy of Sciences 112: 2491–2496.</span>
+    
+    
+    <a href="https://doi.org/10.1073/pnas.1419651112">10.1073/pnas.1419651112</a>
+    
+    
+      <!-- prevent duplicate doi links -->
+      
+      <a href="https://www.pnas.org/content/112/8/2491">https://www.pnas.org/content/112/8/2491</a>
+      
+    
+
+</li>
+<li><span id="Li2016">Li, D., C.-M. Liu, R. Luo, K. Sadakane, and T.-W. Lam, 2015 <b>MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph</b>. Bioinformatics 31: 1674–1676.</span>
     
     
     <a href="https://doi.org/10.1093/bioinformatics/btv033">10.1093/bioinformatics/btv033</a>
@@ -1528,17 +1556,6 @@ may provide further insight.</p>
     
     
     <a href="https://doi.org/10.1093/bioinformatics/btv383">10.1093/bioinformatics/btv383</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Li2016">Li, H., 2016 <b>Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences</b>. Bioinformatics 32: 2103–2110.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/btw152">10.1093/bioinformatics/btw152</a>
     
     
       <!-- prevent duplicate doi links -->
@@ -1694,7 +1711,7 @@ may provide further insight.</p>
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Willem de Koning, Saskia Hiltemann, 2020 <b>Antibiotic resistance detection (Galaxy Training Materials)</b>. <a href="/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html">/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Willem de Koning, Saskia Hiltemann, 2021 <b>Antibiotic resistance detection (Galaxy Training Materials)</b>. <a href="/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html">/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1711,9 +1728,9 @@ may provide further insight.</p>
 <code id="citation-code">@misc{metagenomics-plasmid-metagenomics-nanopore,
     author = "Willem de Koning and Saskia Hiltemann",
     title = "Antibiotic resistance detection (Galaxy Training Materials)",
-    year = "2020",
-    month = "12",
-    day = "07"
+    year = "2021",
+    month = "01",
+    day = "27"
     url = "\url{/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
