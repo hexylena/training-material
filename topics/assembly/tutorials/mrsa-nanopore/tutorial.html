@@ -6,8 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Genome Assembly of MRSA using Oxford Nanopore MinION Data</title>
         
-            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
-
+            <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', '' , 'auto');
+    ga('send', 'pageview');
+</script>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -55,7 +61,7 @@
         <div class="container">
             <a class="navbar-brand" href="/training-material/">
                 <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
-                Galaxy Training! [DEVELOPMENT ONLY]
+                Galaxy Training!
             </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,9 +146,6 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
-                </label>
-                <label data-value="straya" class="btn btn-secondary">
-                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -397,7 +400,7 @@
 
         <div class="contributors-line">By: 
 
- <a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bazante1" alt="Bazante Sanders">Bazante Sanders</a> <a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/miaomiaozhou88" alt="Miaomiao Zhou">Miaomiao Zhou</a> <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bazante1" alt="Bazante Sanders">Bazante Sanders</a>, <a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/miaomiaozhou88" alt="Miaomiao Zhou">Miaomiao Zhou</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -669,6 +672,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -681,13 +688,9 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -781,7 +784,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jan 22, 2021 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -1333,6 +1336,7 @@ because of stochastic processes in the algorithms.</p>
   <ol>
     <li>How many contigs do you have?</li>
     <li>What is the coverage of your biggest contig?</li>
+    <li>What is the length of your biggest contig?</li>
   </ol>
 
   <blockquote class="solution">
@@ -1341,6 +1345,7 @@ because of stochastic processes in the algorithms.</p>
 
     <ol>
       <li>2</li>
+      <li>181</li>
       <li>2.9mb</li>
     </ol>
   </blockquote>
@@ -1469,6 +1474,7 @@ the largest contig can mean that it is the total chromosomal <span class="notran
         <li>For the plasmid and resistance results the identity, overlap, length and the location on the contig can be found here.</li>
         <li>Multiple rep sequences are located on the second contig. (See “plasmid typing for gram-positive bacteria” <a class="citation" href="#Lozano_2012">Lozano <i>et al.</i> 2012</a> for more information)</li>
         <li>Multiple resistance genes can be found on both contig 1 and contig 2.</li>
+        <li>In the last column there are “Accession” numbers. These are references to NCBI, and you can search for these numbers there. E.g. <a href="https://www.ncbi.nlm.nih.gov/nuccore/M13771">M13771</a></li>
       </ul>
     </li>
   </ol>
@@ -1488,12 +1494,14 @@ it is logical to find the resistance gene in a specific bacteria.</p>
   <h3 id="question-question-4"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
   <ol class="solution">
     <li>To what family does <a href="https://card.mcmaster.ca/ontology/36911">mecA</a> belong?</li>
-    <li>Do you expect to find this gene in this MRSA strain and why?
+    <li>Do you expect to find this gene in this MRSA strain and why?</li>
+    <li>Is the accession number of the entry related to the accession reported by staramr?
       <blockquote>
         <h3 id="solution-solution-4"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
         <ol>
           <li><a href="https://card.mcmaster.ca/ontology/37589">Methicillin resistant PBP2</a></li>
           <li>The strain we use is a Methicillin(multi) resistant Staphylococcus aureus. As <code class="language-plaintext highlighter-rouge">mecA</code> has a perfect resistome mach with <em>S. aureus</em>, and the AMR Gene Family is methicillin resistant PBP2, we expect to see mecA in MRSA.</li>
+          <li>No, these are completely unrelated. Unfortunately this is a <strong>very</strong> common issue in bioinformatics. Everyone builds their own numbering system for entries in their database (usually calling them ‘accessions’), and then someone else needs to build a service to link these databases.</li>
         </ol>
       </blockquote>
     </li>
@@ -1555,6 +1563,29 @@ from prokka as an information track.</p>
             <li><em>“Qualifier value column or raw text”</em>: <code class="language-plaintext highlighter-rouge">4</code></li>
           </ul>
         </li>
+        <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Qualifiers”</em>
+          <ul>
+            <li><em>“Name”</em>: <code class="language-plaintext highlighter-rouge">accession</code></li>
+            <li><em>“Qualifier value column or raw text”</em>: <code class="language-plaintext highlighter-rouge">11</code></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2"><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters:
+      <ul>
+        <li><em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code>
+          <ul>
+            <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“FASTA/Q file #2”</em>: <code class="language-plaintext highlighter-rouge">Trimmomatic on DRR187567_2 uncompressed (R2 paired)</code> (output of <strong>Trimmomatic</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+          </ul>
+        </li>
+        <li><em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from the history and build index</code>
+          <ul>
+            <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Use the following dataset as the reference sequence”</em>: <code class="language-plaintext highlighter-rouge">consensus</code> (output of <strong>Flye assembly</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+          </ul>
+        </li>
+        <li><em>“Single or Paired-end <span class="notranslate">reads</span>”</em>: <code class="language-plaintext highlighter-rouge">Single</code></li>
+        <li><em>“Select fastq dataset”</em>: <code class="language-plaintext highlighter-rouge">DRR187567-filtered</code></li>
+        <li><em>“Select a profile of preset options”</em>: <code class="language-plaintext highlighter-rouge">Oxford Nanopore read to reference <span class="notranslate">mapping</span>. Slightly more sensitive for Oxford Nanopore to reference <span class="notranslate">mapping</span> (-k15). For PacBio <span class="notranslate">reads</span>, HPC minimizers consistently leads to faster performance and more sensitive results in comparison to normal minimizers. For Oxford Nanopore data, normal minimizers are better, though not much. The effectiveness of HPC is determined by the sequencing error mode. (map-ont)</code></li>
       </ul>
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.9+galaxy0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.9+galaxy0"><strong>JBrowse</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.9+<span class="notranslate">galaxy</span>0</span></span>  with the following parameters:
@@ -1577,7 +1608,6 @@ from prokka as an information track.</p>
                         <li><em>“Track Type”</em>: <code class="language-plaintext highlighter-rouge">GFF/GFF3/<span class="notranslate">BED</span> Features</code>
                           <ul>
                             <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“GFF/GFF3/<span class="notranslate">BED</span> Track Data”</em>: <code class="language-plaintext highlighter-rouge">out_gff</code> (output of <strong>Prokka</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
-                            <li><em>“Index this track”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
                             <li><em>“JBrowse Track Type [Advanced]”</em>: <code class="language-plaintext highlighter-rouge">Neat Canvas Features</code></li>
                             <li><em>“Track Visibility”</em>: <code class="language-plaintext highlighter-rouge">On for new users</code></li>
                           </ul>
@@ -1600,6 +1630,25 @@ from prokka as an information track.</p>
                             <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“GFF/GFF3/<span class="notranslate">BED</span> Track Data”</em>: <code class="language-plaintext highlighter-rouge">Table to GFF3 on ...</code>, the output of the table to gff3 step</li>
                             <li><em>“JBrowse Track Type [Advanced]”</em>: <code class="language-plaintext highlighter-rouge">Neat Canvas Features</code></li>
                             <li><em>“Track Visibility”</em>: <code class="language-plaintext highlighter-rouge">On for new users</code></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Track Group”</em>
+              <ul>
+                <li><em>“Track Category”</em>: <code class="language-plaintext highlighter-rouge">Sequencing</code></li>
+                <li>In <em>“Annotation Track”</em>:
+                  <ul>
+                    <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Annotation Track”</em>
+                      <ul>
+                        <li><em>“Track Type”</em>: <code class="language-plaintext highlighter-rouge">BAM Pileups</code>
+                          <ul>
+                            <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“BAM Track Data”</em>: Minimap2’s output</li>
+                            <li><em>“Autogenerate SNP Track”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
                           </ul>
                         </li>
                       </ul>
@@ -1834,8 +1883,8 @@ found genes, but it can be used with many more inputs.</p>
     author = "Bazante Sanders and Miaomiao Zhou and Saskia Hiltemann and Helena Rasche",
     title = "Genome Assembly of MRSA using Oxford Nanopore MinION Data (Galaxy Training Materials)",
     year = "2021",
-    month = "01",
-    day = "22"
+    month = "02",
+    day = "10"
     url = "\url{/training-material/topics/assembly/tutorials/mrsa-nanopore/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }

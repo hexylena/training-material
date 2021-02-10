@@ -6,8 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Functionally Assembled Terrestrial Ecosystem Simulator (FATES) with Galaxy Climate JupyterLab</title>
         
-            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
-
+            <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', '' , 'auto');
+    ga('send', 'pageview');
+</script>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -55,7 +61,7 @@
         <div class="container">
             <a class="navbar-brand" href="/training-material/">
                 <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
-                Galaxy Training! [DEVELOPMENT ONLY]
+                Galaxy Training!
             </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,9 +146,6 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
-                </label>
-                <label data-value="straya" class="btn btn-secondary">
-                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -337,10 +340,16 @@
     <section class="tutorial">
         <h1 data-toc-skip>Functionally Assembled Terrestrial Ecosystem Simulator (FATES) with Galaxy Climate JupyterLab</h1>
         
+        <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading">Under Development!</h4>
+            <p>This tutorial is not in its final state. The content may change a lot in the next months.
+            Because of this status, it is also not listed in the topic pages.</p>
+        </div>
+        
 
         <div class="contributors-line">By: 
 
- <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annefou" alt="Anne Fouilloux">Anne Fouilloux</a>
+<a href="/training-material/hall-of-fame/annefou/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annefou" alt="Anne Fouilloux">Anne Fouilloux</a>
 
 </div>
 
@@ -424,23 +433,6 @@
                         
                     
                         
-                            
-                            <li> Functionally Assembled Terrestrial Ecosystem Simulator (FATES):
-                            
-                                <a href="/training-material/topics/climate/tutorials/fates/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
-                                
-                            
-                            
-                                
-                                    - <a href="/training-material/topics/climate/tutorials/fates/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
-                                
-                            
-                            </li>
-                        
-                    
-                        
-                    
-                        
                     
                         
                     
@@ -458,8 +450,6 @@
         
             <ul>
                 
-                    
-                        
                     
                         
                     
@@ -538,18 +528,11 @@
             <ul>
                 <div class="supporting_material">
                 
-                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/climate/slides/introduction.html" title="Topic Overview slides">
-                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Topic Overview slides
+                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/climate/slides/introduction.html" title="Introduction slides">
+                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Introduction slides
                     </a></li>
                 
 
-                
-                    <li class="btn btn-default supporting_material">
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.4108341">
-    <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span> Datasets
-</a>
-
-</li>
                 
 
                 
@@ -580,7 +563,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 17, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -955,7 +938,7 @@ For this tutorial, we  wish to have a “cold” start as we are mostly interest
 When ready to run in production, the model needs to be spin-up (run for several centuries until it reaches some kind of equilibrium).</li>
   </ul>
 
-  <p>We will first make a short simulation (6 months):</p>
+  <p>We will first make a short simulation (1 month):</p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
 source activate fates
@@ -963,8 +946,8 @@ source activate fates
 cd $HOME/ctsm_cases/fates_alp1
 ./case.setup
 ./case.build
-./xmlchange STOP_OPTION=nmonths            # set the simulation periods to "nmonths"
-./xmlchange STOP_N=6                       # set the length of simulation, i.e, how many months
+./xmlchange STOP_OPTION=nmonths            # set the simulation periods to "years"
+./xmlchange STOP_N=1                       # set the length of simulation, i.e, how many years
 ./case.submit &gt; case_submit.out 2&gt;&amp;1
 </code></pre></div>  </div>
   <p>The step above can take a lot of time because it needs to compile and run the FATES model.
@@ -983,7 +966,7 @@ tutorial.</p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash 
 
-cd $HOME/work/fates_alp1
+cd $HOME/work/fates
 ls -la
 </code></pre></div>  </div>
   <p>You should see two folders:</p>
@@ -992,11 +975,11 @@ ls -la
     <li>run: this directory will be used during your simulation run to generate output files, etc.</li>
   </ul>
 
-  <p>The <strong>bld</strong> folder contains the model executable (called <code class="language-plaintext highlighter-rouge">cesm.exe</code>) while <strong>run</strong> contains all the files used for running CLM-FATES (and not already archived).
+  <p>The <strong>bld</strong> folder contains the model executable (called <code class="language-plaintext highlighter-rouge">cesm,exe</code>) while <strong>run</strong> contains all the files used for running CLM-FATES (and not already archived).
 Once your run is terminated, many files are moved from the <strong>run</strong> folder to the <strong>archive</strong> folder:</p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
-cd $HOME/archive/fates_alp1
+cd $HOME/archive/fates
 ls lnd/hist
 </code></pre></div>  </div>
 
@@ -1020,7 +1003,7 @@ CLM-FATES model outputs are stored in netCDF format.</p>
       </ul>
       <ul>
         <li>Rename your notebook to <strong>check_analysis.ipynb</strong></li>
-        <li>All the analysis of the 6 month FATES simulation will be done from this notebook</li>
+        <li>All the analysis of the 2 month FATES simulation will be done from this notebook</li>
       </ul>
     </li>
     <li>Get metadata
@@ -1034,7 +1017,7 @@ xr.set_options(display_style="html")
 
 case = 'fates_alp1'
 path = os.path.join(os.getenv('HOME'), 'archive', case, 'lnd', 'hist')
-dset = xr.open_dataset(path + '/fates_alp1.clm2.h0.2000-01.nc')
+dset = xr.open_dataset(path + '/fates_alp1_t.clm2.h0.2000-01.nc')
 dset
 </code></pre></div>  </div>
   <p>As shown above, we are now using Python 3 for analyzing the results and <a href="http://xarray.pydata.org/en/stable/">xarray</a> which 
@@ -1048,7 +1031,7 @@ we opened the single history file and print metadata.</p>
   <p>You can select a variable by using its short name (see metadata above) and then calling the plot method:</p>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dset['AREA_TREES'].plot()
 </code></pre></div>  </div>
-  <p>As we ran 6 months only, we have very little points in our timeseries!</p>
+  <p>As we ran one month only, we have very little points in our timeseries!</p>
 
   <p>To plot 2D variables such as <strong>CANOPY_AREA_BY_AGE</strong>, you can use the <em>col_wrap</em> option when plotting:</p>
 
@@ -1318,7 +1301,7 @@ If you are not familiar with <code class="language-plaintext highlighter-rouge">
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Anne Fouilloux, 2020 <b>Functionally Assembled Terrestrial Ecosystem Simulator (FATES) with Galaxy Climate JupyterLab (Galaxy Training Materials)</b>. <a href="/training-material/topics/climate/tutorials/fates-jupyterlab/tutorial.html">/training-material/topics/climate/tutorials/fates-jupyterlab/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Anne Fouilloux, 2021 <b>Functionally Assembled Terrestrial Ecosystem Simulator (FATES) with Galaxy Climate JupyterLab (Galaxy Training Materials)</b>. <a href="/training-material/topics/climate/tutorials/fates-jupyterlab/tutorial.html">/training-material/topics/climate/tutorials/fates-jupyterlab/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1335,9 +1318,9 @@ If you are not familiar with <code class="language-plaintext highlighter-rouge">
 <code id="citation-code">@misc{climate-fates-jupyterlab,
     author = "Anne Fouilloux",
     title = "Functionally Assembled Terrestrial Ecosystem Simulator (FATES) with Galaxy Climate JupyterLab (Galaxy Training Materials)",
-    year = "2020",
-    month = "12",
-    day = "17"
+    year = "2021",
+    month = "02",
+    day = "10"
     url = "\url{/training-material/topics/climate/tutorials/fates-jupyterlab/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }

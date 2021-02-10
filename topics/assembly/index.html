@@ -4,10 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training! [DEVELOPMENT ONLY]</title>
+        <title>Galaxy Training!</title>
         
-            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
-
+            <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', '' , 'auto');
+    ga('send', 'pageview');
+</script>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -33,7 +39,7 @@
         <div class="container">
             <a class="navbar-brand" href="/training-material/">
                 <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
-                Galaxy Training! [DEVELOPMENT ONLY]
+                Galaxy Training!
             </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,9 +96,6 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
-                </label>
-                <label data-value="straya" class="btn btn-secondary">
-                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -229,569 +232,17 @@
       
         <tr>
           <td class="tutorial_title">
-          An Introduction to Genome Assembly
-          <div class="">
-          
-            
-<span class="level introductory" title="Introductory Tutorial">
-  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>
-</span>
-
-
-          
-          
-          </div>
-          </td>
-          
-            <td> 
-    <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/assembly/tutorials/general-introduction/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Fslides.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </ul>
-    </span>
-
-
- </td>
-            <td> 
-    <span class="btn-group">
-        <a href="/training-material/topics/assembly/tutorials/general-introduction/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </span>
-
- </td>
-
-            
-              <td> 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.582600">
-    <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
-</a>
-
- </td>
-              <td> 
-    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/general-introduction/workflows/" title="Workflows" alt="An Introduction to Genome Assembly workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
-    </a>
-
- </td>
-              <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/assembly/tutorials/general-introduction/tours/">
-    <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
-</a>
-
- </td>
-            
-            
-              <td> 
-
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-    </a>
-    <ul class="dropdown-menu">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
-            Galaxy@GenOuest
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="http://galaxy.migale.inra.fr/" title="Migale">
-            Migale
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
-        </a>
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
-        </a>
-        
-    
-        
-    
-        
-    
-    </ul>
-
-
- </td>
-            
-          
-         </tr>
-         
-       
-    
-    
-
-    
-      
-        <tr>
-          <td class="tutorial_title">
-          Chloroplast genome assembly
-          <div class="">
-          
-          
-          </div>
-          </td>
-          
-            <td> 
-
- </td>
-            <td> 
-    <span class="btn-group">
-        <a href="/training-material/topics/assembly/tutorials/chloroplast-assembly/tutorial.html" class="btn btn-default" title="Follow the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fchloroplast-assembly%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </span>
-
- </td>
-
-            
-              <td> 
-<a class="topic-icon" href="http://doi.org/10.5281/zenodo.3567224">
-    <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
-</a>
-
- </td>
-              <td> 
-    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/chloroplast-assembly/workflows/" title="Workflows" alt="Chloroplast genome assembly workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
-    </a>
-
- </td>
-              <td> 
- </td>
-            
-            
-              <td> 
-
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-    </a>
-    <ul class="dropdown-menu">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
-            Galaxy Africa
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
-            Galaxy@GenOuest
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
-            Street Science
-        </a>
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
-            UseGalaxy.eu
-        </a>
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.no/" title="UseGalaxy.no">
-            UseGalaxy.no
-        </a>
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
-        </a>
-        
-    
-        
-    
-        
-    
-    </ul>
-
-
- </td>
-            
-          
-         </tr>
-         
-       
-    
-    
-
-    
-      
-        <tr>
-          <td class="tutorial_title">
           De Bruijn Graph Assembly
           <div class="">
           
-            
-<span class="level introductory" title="Introductory Tutorial">
-  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>
-</span>
-
-
-          
           
           </div>
           </td>
           
             <td> 
-    <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/assembly/tutorials/debruijn-graph-assembly/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fdebruijn-graph-assembly%2Fslides.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </ul>
-    </span>
+    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/debruijn-graph-assembly/slides.html">
+    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+</a>
 
 
  </td>
@@ -900,6 +351,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -916,13 +371,9 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -1032,86 +483,6 @@
         
     
     </ul>
-
-
- </td>
-            
-          
-         </tr>
-         
-       
-    
-    
-
-    
-      
-        <tr>
-          <td class="tutorial_title">
-          Deeper look into Genome Assembly algorithms
-          <div class="">
-          
-            
-<span class="level intermediate" title="Intermediate Tutorial">
-  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>
-</span>
-
-
-          
-          
-          </div>
-          </td>
-          
-            <td> 
-    <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/assembly/tutorials/algorithms-introduction/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Falgorithms-introduction%2Fslides.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </ul>
-    </span>
-
-
- </td>
-            <td> 
- </td>
-
-            
-              <td> 
- </td>
-              <td> 
- </td>
-              <td> 
- </td>
-            
-            
-              <td> 
 
 
  </td>
@@ -1252,6 +623,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -1264,13 +639,9 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -1500,6 +871,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -1512,13 +887,9 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -1597,6 +968,244 @@
     
         
     
+        
+    
+        
+    
+        
+    
+    </ul>
+
+
+ </td>
+            
+          
+         </tr>
+         
+       
+    
+    
+
+    
+      
+        <tr>
+          <td class="tutorial_title">
+          Introduction to Genome Assembly
+          <div class="">
+          
+          
+          </div>
+          </td>
+          
+            <td> 
+    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/general-introduction/slides.html">
+    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+</a>
+
+
+ </td>
+            <td> 
+    <span class="btn-group">
+        <a href="/training-material/topics/assembly/tutorials/general-introduction/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+        
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fgeneral-introduction%2Ftutorial.html&edit-text=&act=url" title="">
+            And more!
+        </a>
+    </span>
+
+ </td>
+
+            
+              <td> 
+<a class="topic-icon" href="https://doi.org/10.5281/zenodo.582600">
+    <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
+</a>
+
+ </td>
+              <td> 
+    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/general-introduction/workflows/" title="Workflows" alt="Introduction to Genome Assembly workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
+    </a>
+
+ </td>
+              <td> 
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/assembly/tutorials/general-introduction/tours/">
+    <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
+</a>
+
+ </td>
+            
+            
+              <td> 
+
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+    </a>
+    <ul class="dropdown-menu">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
+            Galaxy@GenOuest
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="http://galaxy.migale.inra.fr/" title="Migale">
+            Migale
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
         
     
         
@@ -1744,11 +1353,13 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
-        
-    
         
     
         
@@ -1781,8 +1392,6 @@
         <a class="dropdown-item" href="https://humancellatlas.usegalaxy.eu/" title="Human Cell Atlas">
             Human Cell Atlas
         </a>
-        
-    
         
     
         
@@ -1916,40 +1525,9 @@
           </td>
           
             <td> 
-    <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/assembly/tutorials/unicycler-assembly/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Funicycler-assembly%2Fslides.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </ul>
-    </span>
+    <a class="topic-icon" href="/training-material/topics/assembly/tutorials/unicycler-assembly/slides.html">
+    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+</a>
 
 
  </td>
@@ -2058,6 +1636,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -2069,8 +1651,6 @@
         <a class="dropdown-item" href="https://test.galaxyproject.org/" title="Galaxy Test">
             Galaxy Test
         </a>
-        
-    
         
     
         
@@ -2089,8 +1669,6 @@
         <a class="dropdown-item" href="https://www.galaxytrakr.org/" title="GalaxyTrakr">
             GalaxyTrakr
         </a>
-        
-    
         
     
         
@@ -2238,41 +1816,6 @@
           </td>
           
             <td> 
-    <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/assembly/tutorials/assembly-with-preprocessing/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fassembly%2Ftutorials%2Fassembly-with-preprocessing%2Fslides.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </ul>
-    </span>
-
 
  </td>
             <td> 
@@ -2376,6 +1919,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -2388,13 +1935,9 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -2525,7 +2068,7 @@
         
         
 
- <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a> <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Anton Nekrutenko">Anton Nekrutenko</a> <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a>
+<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Anton Nekrutenko">Anton Nekrutenko</a>, <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a>
 
 
 
@@ -2540,7 +2083,7 @@
         
         
 
- <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a> <a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annasyme" alt="Anna Syme">Anna Syme</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a> <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Anton Nekrutenko">Anton Nekrutenko</a> <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a> <a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bazante1" alt="Bazante Sanders">Bazante Sanders</a> <a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/miaomiaozhou88" alt="Miaomiao Zhou">Miaomiao Zhou</a> <a href="/training-material/hall-of-fame/wm75/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Wolfgang Maier">Wolfgang Maier</a>
+<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bazante1" alt="Bazante Sanders">Bazante Sanders</a>, <a href="/training-material/hall-of-fame/miaomiaozhou88/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/miaomiaozhou88" alt="Miaomiao Zhou">Miaomiao Zhou</a>, <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Anton Nekrutenko">Anton Nekrutenko</a>, <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a>, <a href="/training-material/hall-of-fame/wm75/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Wolfgang Maier">Wolfgang Maier</a>
 
 
 
@@ -2557,7 +2100,6 @@
         <p>
     The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 </p>
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/45cf6034dc43ef4e3ca90c37cf54f9cd4ce60c40">45cf6034dc43ef4e3ca90c37cf54f9cd4ce60c40</a></p>
     </div>
 </footer>
 
