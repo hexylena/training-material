@@ -6,14 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>metaQuantome 1: Data creation</title>
         
-            <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', '' , 'auto');
-    ga('send', 'pageview');
-</script>
+            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -146,6 +140,9 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
+                <label data-value="straya" class="btn btn-secondary">
+                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -331,7 +328,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/subinamehta" alt="Subina Mehta">Subina Mehta</a>, <a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/timothygriffin" alt="Timothy J. Griffin">Timothy J. Griffin</a>, <a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pratikdjagtap" alt="Pratik Jagtap">Pratik Jagtap</a>, <a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/emmaleith" alt="Emma Leith">Emma Leith</a>, <a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mariecrane" alt="Marie Crane">Marie Crane</a>
+ <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/subinamehta" alt="Subina Mehta">Subina Mehta</a> <a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/timothygriffin" alt="Timothy J. Griffin">Timothy J. Griffin</a> <a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pratikdjagtap" alt="Pratik Jagtap">Pratik Jagtap</a> <a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/emmaleith" alt="Emma Leith">Emma Leith</a> <a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mariecrane" alt="Marie Crane">Marie Crane</a>
 
 </div>
 
@@ -585,7 +582,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jan 29, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -770,28 +767,25 @@ https://zenodo.org/record/4037137/files/T7B_1.mzml
       <ul>
         <li>Click the <strong>Operations on multiple datasets</strong> check box at the top of the history panel</li>
       </ul>
+
+      <blockquote class="tip">
+
+        <h3 id="tip-tip-creating-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a dataset collection</h3>
+
+        <ul>
+          <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="../../../galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>
+          <li>Check all the datasets in your history you would like to include</li>
+          <li>
+            <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>
+
+            <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>
+          </li>
+          <li>Enter a name for your collection</li>
+          <li>Click <strong>Create List</strong> to build your collection</li>
+          <li>Click on the checkmark icon at the top of your history again</li>
+        </ul>
+      </blockquote>
     </li>
-  </ol>
-
-  <blockquote class="tip">
-
-    <h3 id="tip-tip-creating-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a dataset collection</h3>
-
-    <ul>
-      <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="../../../galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>
-      <li>Check all the datasets in your history you would like to include</li>
-      <li>
-        <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>
-
-        <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>
-      </li>
-      <li>Enter a name for your collection</li>
-      <li>Click <strong>Create List</strong> to build your collection</li>
-      <li>Click on the checkmark icon at the top of your history again</li>
-    </ul>
-  </blockquote>
-
-  <ol>
     <li>Rename the dataset collection as <code class="language-plaintext highlighter-rouge">MZML dataset collection</code>.</li>
   </ol>
 
@@ -1015,8 +1009,21 @@ our tutorial on <a href="/training-material/topics/proteomics/tutorials/protein-
         <li><em>“the pattern”</em>: <code class="language-plaintext highlighter-rouge">con_</code></li>
       </ul>
     </li>
-    <li>Rename PSM_Report_no_contaminants</li>
+    <li>
+      <p>Rename <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> to output file to <code class="language-plaintext highlighter-rouge">PSM_Report_no_contaminants</code></p>
+
+      <blockquote class="tip">
+
+        <h3 id="tip-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Renaming a dataset</h3>
+        <ul>
+          <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
+          <li>In the central panel, change the <strong>Name</strong> field</li>
+          <li>Click the <strong>Save</strong> button</li>
+        </ul>
+      </blockquote>
+    </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -1030,19 +1037,19 @@ our tutorial on <a href="/training-material/topics/proteomics/tutorials/protein-
         <li><em>“the pattern”</em>: <code class="language-plaintext highlighter-rouge">con_</code></li>
       </ul>
     </li>
-    <li>Rename Peptide_Report_no_contaminants</li>
-  </ol>
-</blockquote>
-<blockquote>
+    <li>
+      <p>Rename <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> the output file to <code class="language-plaintext highlighter-rouge">Peptide_Report_no_contaminants</code></p>
 
-  <blockquote class="comment">
-    <h3 id="comment-comment-3"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+      <blockquote class="comment">
+        <h3 id="comment-comment-3"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
 
-    <p>In Proteomics, contamination is generally detected as peaks in spectra that did not originate
+        <p>In Proteomics, contamination is generally detected as peaks in spectra that did not originate
 from the samples and can be introduced in the sample from a variety of environmental sources or human error. Identification of these
 contaminants is critical to enable their removal before data analysis, mainly, to maintain the validity of conclusions
 drawn from statistical analyses. Thus, this selection tool helps us remove the contaminants that were identified in the spectral data.</p>
-  </blockquote>
+      </blockquote>
+    </li>
+  </ol>
 
 </blockquote>
 
@@ -1066,8 +1073,8 @@ drawn from statistical analyses. Thus, this selection tool helps us remove the c
 
 <h2 id="removing-file-extensions-for-quantification"><em>Removing file extensions for Quantification</em></h2>
 <p>This is a data manipulation step to make the data compatible with other <span class="notranslate">downstream</span> processing tools. The Replace text tool replaces the .mgf extension from the PSM report so that it can be used as an input for FlashLFQ.</p>
-<blockquote class="notranslate hands_on">
 
+<blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-removing-file-extensions"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Removing file extensions</h3>
 
   <ol>
@@ -1697,8 +1704,8 @@ FROM ec</code></li>
     author = "Subina Mehta and Timothy J. Griffin and Pratik Jagtap and Emma Leith and Marie Crane",
     title = "metaQuantome 1: Data creation (Galaxy Training Materials)",
     year = "2021",
-    month = "02",
-    day = "10"
+    month = "01",
+    day = "29"
     url = "\url{/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1762,6 +1769,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                         
                     
                         
+                    
+                        
                             
                             <li> Metaproteomics tutorial:
                             
@@ -1771,6 +1780,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                                 
                             
                             </li>
+                        
+                    
                         
                     
                         

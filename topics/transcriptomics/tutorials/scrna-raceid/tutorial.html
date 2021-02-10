@@ -6,14 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Downstream Single-cell RNA analysis with RaceID</title>
         
-            <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', '' , 'auto');
-    ga('send', 'pageview');
-</script>
+            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -146,6 +140,9 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
+                <label data-value="straya" class="btn btn-secondary">
+                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -317,51 +314,9 @@
     },
     {
       "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-plates-batches-barcodes/slides.html",
-      "name": "Plates, Batches, and Barcodes",
-      "description": "Slides for 'Plates, Batches, and Barcodes' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-umis/tutorial.html",
-      "name": "Understanding Barcodes",
-      "description": "Hands-on for 'Understanding Barcodes' tutorial",
-      "learningResourceType": "hands-on tutorial",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-preprocessing/slides.html",
-      "name": "Dealing with Cross-Contamination in Fixed Barcode Protocols",
-      "description": "Slides for 'Dealing with Cross-Contamination in Fixed Barcode Protocols' tutorial",
-      "learningResourceType": "slides",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
-      }
-    },
-    {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-preprocessing/tutorial.html",
-      "name": "Pre-processing of Single-Cell RNA Data",
-      "description": "Hands-on for 'Pre-processing of Single-Cell RNA Data' tutorial",
+      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-scater-qc/tutorial.html",
+      "name": "Single-cell quality control with scater",
+      "description": "Hands-on for 'Single-cell quality control with scater' tutorial",
       "learningResourceType": "hands-on tutorial",
       "interactivityType": "expositive",
       "provider": {
@@ -419,7 +374,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mtekman" alt="Mehmet Tekman">Mehmet Tekman</a>, <a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/astrovsky01" alt="Alex Ostrovsky">Alex Ostrovsky</a>
+ <a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mtekman" alt="Mehmet Tekman">Mehmet Tekman</a> <a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/astrovsky01" alt="Alex Ostrovsky">Alex Ostrovsky</a>
 
 </div>
 
@@ -559,67 +514,6 @@
                         
                     
                         
-                            
-                            <li> Plates, Batches, and Barcodes:
-                            
-                                <a href="/training-material/topics/transcriptomics/tutorials/scrna-plates-batches-barcodes/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
-                                
-                            
-                            
-                            </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                     
                         
                     
@@ -643,73 +537,14 @@
                     
                         
                             
-                            <li> Understanding Barcodes:
+                            <li> Single-cell quality control with scater:
                             
                             
                                 
-                                     <a href="/training-material/topics/transcriptomics/tutorials/scrna-umis/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                     <a href="/training-material/topics/transcriptomics/tutorials/scrna-scater-qc/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                            
-                            <li> Pre-processing of Single-Cell RNA Data:
-                            
-                                <a href="/training-material/topics/transcriptomics/tutorials/scrna-preprocessing/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
-                                
-                            
-                            
-                                
-                                    - <a href="/training-material/topics/transcriptomics/tutorials/scrna-preprocessing/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
-                                
-                            
-                            </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
                         
                     
                         
@@ -745,8 +580,8 @@
             <ul>
                 <div class="supporting_material">
                 
-                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/transcriptomics/slides/introduction.html" title="Introduction slides">
-                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Introduction slides
+                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/transcriptomics/slides/introduction.html" title="Topic Overview slides">
+                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Topic Overview slides
                     </a></li>
                 
 
@@ -952,7 +787,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 9, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -1162,14 +997,14 @@
   <h3 id="hands_on-hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Task description</h3>
 
   <ol>
-    <li><strong>Select first</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_head_tool/1.1.0" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_head_tool/1.1.0"><strong>Select first</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/text_processing/tp_head_tool/1.1.0</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to select”</em>: imported tabular file</li>
         <li><em>“Operation”</em>: <code class="language-plaintext highlighter-rouge">Keep first lines</code></li>
         <li><em>“Number of lines”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
       </ul>
     </li>
-    <li><strong>Transpose</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0"><strong>Transpose</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0</span></span>
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input tabular dataset”</em>: output of <strong>Select first</strong></li>
       </ul>
@@ -1185,7 +1020,7 @@
         </blockquote>
       </blockquote>
     </li>
-    <li><strong>Text transformation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1"><strong>Text transformation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: output of <strong>Transpose</strong></li>
         <li>
@@ -1208,7 +1043,7 @@
         </blockquote>
       </blockquote>
     </li>
-    <li><strong>Datamash</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0"><strong>Datamash</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input tabular dataset”</em>: output of <strong>Text transformation</strong></li>
         <li><em>“Group by fields”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
@@ -1266,7 +1101,7 @@
   <h3 id="hands_on-hands-on-unique-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Unique Cell Types</h3>
 
   <ol>
-    <li><strong>Filtering, Normalisation, and Confounder Removal using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_filtnormconf/raceid_filtnormconf/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_filtnormconf/raceid_filtnormconf/3.1"><strong>Initial processing using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_filtnormconf/raceid_filtnormconf/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Count Matrix”</em>: <code class="language-plaintext highlighter-rouge">intestinal</code> (Input dataset)</li>
         <li>In <em>“Filtering”</em>:
@@ -1400,7 +1235,7 @@
   <blockquote class="solution">
     <h3 id="solution-solution-4"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-    <p>The answer to the first two questions can be seen in log file generated <strong>Filtering, Normalisation, and Confounder Removal using RaceID</strong></p>
+    <p>The answer to the first two questions can be seen in log file generated <strong>Initial processing using RaceID</strong></p>
 
     <ol>
       <li>287 cells remain (66%)</li>
@@ -1467,9 +1302,9 @@ As the variables of the dataset, the more genes included, the more complex the m
   <h3 id="hands_on-hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Task description</h3>
 
   <ol>
-    <li><strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/3.1"><strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/3.1</span></span>   with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RaceID RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Filtering, Normalisation, and Confounder Removal using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RaceID RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Initial processing using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li>In <em>“Clustering”</em>:
           <ul>
             <li><em>“Use Defaults?”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
@@ -1794,7 +1629,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
   <h3 id="hands_on-hands-on-task-description-2"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Task description</h3>
 
   <ol>
-    <li><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1"><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RaceID RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Plot All Clusters?”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
@@ -1932,7 +1767,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
   <h3 id="hands_on-hands-on-ma-plot"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: MA plot</h3>
 
   <ol>
-    <li><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1"><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RaceID RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Plot All Clusters?”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -2008,7 +1843,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
   <h3 id="hands_on-hands-on-task-description-3"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Task description</h3>
 
   <ol>
-    <li><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1"><strong>Cluster Inspection using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RaceID RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li><em>“Plot All Clusters?”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -2077,7 +1912,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
   <h3 id="hands_on-hands-on"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on</h3>
 
   <ol>
-    <li><strong>Lineage computation using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_trajectory/raceid_trajectory/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_trajectory/raceid_trajectory/3.1"><strong>Lineage computation using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_trajectory/raceid_trajectory/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Clustering using RaceID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li>In <em>“Compute transcriptome entropy of each cell”</em>:
@@ -2266,7 +2101,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
   <h3 id="hands_on-hands-on-comparing-trajectory-paths-3-to-1-and-3-to-5"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Comparing trajectory paths 3 to 1, and 3 to 5</h3>
 
   <ol>
-    <li><strong>Lineage Branch Analysis using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1"><strong>Lineage Branch Analysis using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Lineage computation using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li>In <em>“StemID Branch Link Examine”</em>:
@@ -2357,7 +2192,7 @@ Unsurprisingly, there is a higher score for the 3 to 1 trajectory for `c1` cells
   <h3 id="hands_on-hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on</h3>
 
   <ol>
-    <li><strong>Lineage Branch Analysis using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1"><strong>Lineage Branch Analysis using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/3.1</span></span>   with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input RDS”</em>: <code class="language-plaintext highlighter-rouge">outrdat</code> (output of <strong>Lineage computation using StemID</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li>In <em>“StemID Branch Link Examine”</em>:
@@ -2499,7 +2334,7 @@ Unsurprisingly, there is a higher score for the 3 to 1 trajectory for `c1` cells
     title = "Downstream Single-cell RNA analysis with RaceID (Galaxy Training Materials)",
     year = "2021",
     month = "02",
-    day = "10"
+    day = "09"
     url = "\url{/training-material/topics/transcriptomics/tutorials/scrna-raceid/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2536,6 +2371,88 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
         
 
+        
+        <blockquote class="agenda follow-up">
+            <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">curriculum</span> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+            <ul>
+                
+    <li>
+    
+        
+        
+        <a href="/training-material/topics/transcriptomics">Transcriptomics</a>
+        
+            <ul>
+                
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                            <li> Pre-processing of 10X Single-Cell RNA Datasets:
+                            
+                            
+                                
+                                     <a href="/training-material/topics/transcriptomics/tutorials/scrna-preprocessing-tenx/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                
+                            
+                            </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+            </ul>
+        
+    
+    </li>
+
+            </ul>
+        </blockquote>
         
     </section>
 </div>

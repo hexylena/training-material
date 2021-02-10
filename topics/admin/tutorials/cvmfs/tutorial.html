@@ -6,14 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Reference Data with CVMFS</title>
         
-            <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', '' , 'auto');
-    ga('send', 'pageview');
-</script>
+            <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -146,6 +140,9 @@
                 </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
+                <label data-value="straya" class="btn btn-secondary">
+                    <input type="radio" name="options" id="downunder" autocomplete="off"> 🇦🇺
                 </label>
             </div>
 
@@ -343,7 +340,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+ <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -470,7 +467,13 @@
                     
                         
                     
+                        
+                    
+                        
+                    
                 
+                    
+                        
                     
                         
                     
@@ -557,6 +560,8 @@
                     
                         
                     
+                        
+                    
                 
             </ul>
         
@@ -596,7 +601,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jan 28, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -713,20 +718,16 @@
       <p>In your working directory, add the CVMFS role to your <code class="language-plaintext highlighter-rouge">requirements.yml</code></p>
 
       <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s"><span class="notranslate">galaxy</span>project.cvmfs</span>
-  <span class="na">version</span><span class="pi">:</span> <span class="s">0.2.8</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="s">0.2.13</span>
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>Install the requirements with <code class="language-plaintext highlighter-rouge">ansible-<span class="notranslate">galaxy</span></code>:</p>
+      <p>Install the role with:</p>
 
       <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ansible-<span class="notranslate">galaxy</span> role install -p roles -r requirements.yml
 </span></code></pre></div>      </div>
     </li>
     <li>
-      <p>Edit the group variables file, <code class="language-plaintext highlighter-rouge">group_vars/<span class="notranslate">galaxy</span>servers.yml</code>:</p>
-
-      <p><br /></p>
-
       <p>The variables available in this role are:</p>
 
       <table>
@@ -766,11 +767,7 @@
         </tbody>
       </table>
 
-      <p><br /></p>
-
       <p>But, luckily for us, the <span class="notranslate">Galaxy</span> Project CVMFS role has a lot of defaults for these variables which we can use by just setting <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>_cvmfs_repos_enabled</code> to <code class="language-plaintext highlighter-rouge">config-repo</code>. We will also set the <code class="language-plaintext highlighter-rouge">cvmfs_quota_limit</code> to something sensible (500MB) as we have relatively small disks on our instances. In a production setup, you should size this appropriately for the client.</p>
-
-      <p><br /></p>
 
       <p>Add the following lines to your <code class="language-plaintext highlighter-rouge">group_vars/all.yml</code> file, creating it if it doesn’t exist:</p>
 
@@ -910,9 +907,7 @@
           <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na"><span class="notranslate">galaxy</span>_config</span><span class="pi">:</span>
   <span class="na"><span class="notranslate">galaxy</span></span><span class="pi">:</span>
     <span class="c1"># ... existing configuration options in the `<span class="notranslate">galaxy</span>` section ...</span>
-    <span class="na">tool_data_table_config_path</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">/cvmfs/data.<span class="notranslate">galaxy</span>project.org/byhand/location/tool_data_table_conf.xml</span>
-      <span class="pi">-</span> <span class="s">/cvmfs/data.<span class="notranslate">galaxy</span>project.org/managed/location/tool_data_table_conf.xml</span>
+    <span class="na">tool_data_table_config_path</span><span class="pi">:</span> <span class="s">/cvmfs/data.<span class="notranslate">galaxy</span>project.org/byhand/location/tool_data_table_conf.xml,/cvmfs/data.<span class="notranslate">galaxy</span>project.org/managed/location/tool_data_table_conf.xml</span>
 </code></pre></div>          </div>
 
         </blockquote>
@@ -923,7 +918,25 @@
       <p>Re-run the playbook (<code class="language-plaintext highlighter-rouge">ansible-playbook <span class="notranslate">galaxy</span>.yml</code>)</p>
     </li>
     <li>
-      <p>In your <span class="notranslate">Galaxy</span> interface, open the <strong>BWA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>, <strong>BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> or <strong>Bowtie2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool interface (whichever you may have installed). Now check that there are a lot more Genomes available for use!</p>
+      <p>Install the BWA-MEM tool, if needed.</p>
+
+      <blockquote class="tip">
+
+        <h3 id="tip-tip-install-tools-via-the-admin-ui"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Install tools via the Admin UI</h3>
+
+        <ol>
+          <li>Open <span class="notranslate">Galaxy</span> in your browser and type <code class="language-plaintext highlighter-rouge">bwa</code> in the tool search box on the left. If “Map with BWA-MEM” is among the search results, you can skip the following steps.</li>
+          <li>Access the Admin menu from the top bar (you need to be logged-in with an email specified in the <code class="language-plaintext highlighter-rouge">admin_users</code> setting)</li>
+          <li>Click “Install and Uninstall”, which can be found on the left, under “Tool Management”</li>
+          <li>Enter <code class="language-plaintext highlighter-rouge">bwa</code> in the search interface</li>
+          <li>Click on the first hit, having <code class="language-plaintext highlighter-rouge">devteam</code> as owner</li>
+          <li>Click the “Install” button for the latest revision</li>
+          <li>Enter “<span class="notranslate">Mapping</span>” as the target section and click “OK”.</li>
+        </ol>
+      </blockquote>
+    </li>
+    <li>
+      <p>In your <span class="notranslate">Galaxy</span> server, open the <strong>Map with BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool. Now check that there are a lot more reference genomes available for use!</p>
 
       <p><img src="../../images/available_genomes.png" alt="available_genomes.png" /></p>
     </li>
@@ -1021,8 +1034,8 @@
     author = "Simon Gladman and Helena Rasche",
     title = "Reference Data with CVMFS (Galaxy Training Materials)",
     year = "2021",
-    month = "02",
-    day = "10"
+    month = "01",
+    day = "28"
     url = "\url{/training-material/topics/admin/tutorials/cvmfs/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
