@@ -6,16 +6,13 @@ on: [pull_request]
 jobs:
   setup:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby: [2.5]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1.64.1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: "2.5.0"
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
@@ -31,16 +28,13 @@ jobs:
   lint-frontmatter:
     needs: setup
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby: [2.5]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1.64.1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: "2.5.0"
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
@@ -97,16 +91,13 @@ jobs:
   build-site:
     needs: setup
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby: [2.5]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1.64.1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: "2.5.0"
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
