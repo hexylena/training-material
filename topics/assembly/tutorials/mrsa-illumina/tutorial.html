@@ -723,15 +723,11 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://metagenomics.usegalaxy.eu/" title="Metagenomics">
             Metagenomics
         </a>
-        
-    
-        
-    
-        
-    
         
     
         
@@ -785,7 +781,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 10, 2021 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 11, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -797,18 +793,9 @@
                 <div class="col-sm-10">
                     <h1 class="no_toc" id="introduction">Introduction</h1>
 
-<p>In this training you’re going to make an assembly of data produced by
-“Complete Genome Sequences of Eight Methicillin-Resistant
-Staphylococcus aureus Strains Isolated from Patients in
-Japan” from <a class="citation" href="#Hikichi_2019">Hikichi <i>et al.</i> 2019</a> which describes:</p>
+<p><em>Staphylococcus aureus</em> is currently the pathogen responsible of most common hospital-acquired infections, whose success results of its extensive virulence factors. One of the characteristics of this bacterial species is its ability to adquire resistance to antibiotics, which often results in epidemic waves. Methicillin-resistant <em>S. aureus</em> (MRSA) refers to group of strains which have adquired a multiple drug resistance to beta-lactam antibiotics. Its clinical manifestations range from asymptomatic colonization of the nasal mucosa to soft tissue infection to fulminant invasive disease.</p>
 
-<blockquote>
-  <p>Methicillin-resistant Staphylococcus aureus (MRSA) is a major pathogen
-causing nosocomial infections, and the clinical manifestations of MRSA
-range from asymptomatic colonization of the nasal mucosa to soft tissue
-infection to fulminant invasive disease. Here, we report the complete
-genome sequences of eight MRSA strains isolated from patients in Japan.</p>
-</blockquote>
+<p>In this training we are going to report the complete genome sequences of eight MRSA strains isolated from patients in Japan, by using <span class="notranslate">RNA</span>-seq data generated in <a class="citation" href="#Hikichi_2019">Hikichi <i>et al.</i> 2019</a>.</p>
 
 <blockquote class="agenda">
   <h3 id="agenda">Agenda</h3>
@@ -819,7 +806,7 @@ genome sequences of eight MRSA strains isolated from patients in Japan.</p>
   <li><a href="#background" id="markdown-toc-background">Background</a></li>
   <li><a href="#quality-control" id="markdown-toc-quality-control">Quality Control</a></li>
   <li><a href="#assembly" id="markdown-toc-assembly">Assembly</a>    <ol>
-      <li><a href="#qc" id="markdown-toc-qc">QC</a></li>
+      <li><a href="#genome-assembly-evaluation" id="markdown-toc-genome-assembly-evaluation">Genome assembly evaluation</a></li>
     </ol>
   </li>
   <li><a href="#identification-of-amr-genes" id="markdown-toc-identification-of-amr-genes">Identification of AMR Genes</a>    <ol>
@@ -833,11 +820,7 @@ genome sequences of eight MRSA strains isolated from patients in Japan.</p>
 
 <h1 id="background">Background</h1>
 
-<p>Sequencing (determining of <span class="notranslate">DNA</span>/<span class="notranslate">RNA</span> nucleotide sequence) is used all over
-the world for all kinds of analysis. The product of these sequencers are
-<span class="notranslate">reads</span>, which are sequences of detected nucleotides. Depending on the
-technique these have specific lengths (30-500bp) or using Oxford
-Nanopore Technologies sequencing have much longer variable lengths.</p>
+<p>Sequencing (determining of <span class="notranslate">DNA</span>/<span class="notranslate">RNA</span> nucleotide sequence) is used all over the world for all kinds of analysis. The product of these sequencers are <span class="notranslate">reads</span>, which are sequences of detected nucleotides. Depending on the technique these have specific lengths (30-500bp) or using Oxford Nanopore Technologies sequencing have much longer variable lengths.</p>
 
 <blockquote class="comment">
   <h3 id="comment-background-illumina-miseq"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Background: Illumina MiSeq</h3>
@@ -1009,7 +992,7 @@ Tutorial</a>.</p>
 <p>To assess the quality by hand would be too much work. That’s why tools like
 <a href="https://github.com/wdecoster/NanoPlot">NanoPlot</a> or
 <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> are made,
-which will generate a summary and plots of the data statistics. NanoPlot is
+which allows generate a summary and plots of the data statistics. NanoPlot is
 mainly used for long-read data, like ONT and PACBIO and FastQC for short read,
 like Illumina and Sanger.</p>
 
@@ -1059,7 +1042,7 @@ like Illumina and Sanger.</p>
   <h3 id="hands_on-hands-on-assessing-the-data-quality-of-the-trimmed-reads-and-comparing-to-the-input-reads"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Assessing the data quality of the trimmed <span class="notranslate">reads</span> and comparing to the input <span class="notranslate">reads</span></h3>
 
   <ol>
-    <li><strong>Trimmomatic</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic" title="Tested with toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic"><strong>Trimmomatic</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/pjbriggs/trimmomatic</span></span>   with the following parameters:
       <ul>
         <li><em>“Single-end or paired-end <span class="notranslate">reads</span>?”</em>: <code class="language-plaintext highlighter-rouge">Paired-end (two separate input files)</code>
           <ul>
@@ -1263,7 +1246,7 @@ because of stochastic processes in the algorithms.</p>
   <h3 id="hands_on-hands-on-assembly-using-shovill"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Assembly using Shovill</h3>
 
   <ol>
-    <li><strong>Shovill</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/shovill" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/shovill"><strong>Shovill</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/shovill</span></span>  with the following parameters:
       <ul>
         <li><em>“Input <span class="notranslate">reads</span> type, collection or single library”</em>: <code class="language-plaintext highlighter-rouge">Paired End</code>
           <ul>
@@ -1317,7 +1300,7 @@ because of stochastic processes in the algorithms.</p>
   </ol>
 </blockquote>
 
-<h2 id="qc">QC</h2>
+<h2 id="genome-assembly-evaluation">Genome assembly evaluation</h2>
 
 <p><a href="http://quast.bioinf.spbau.ru/">Quast</a> ((missing reference))
 is a tool providing quality metrics for assemblies, and can also be used
@@ -1773,7 +1756,7 @@ from prokka as an information track.</p>
     title = "Genome Assembly of MRSA using Illumina MiSeq Data (Galaxy Training Materials)",
     year = "2021",
     month = "02",
-    day = "10"
+    day = "11"
     url = "\url{/training-material/topics/assembly/tutorials/mrsa-illumina/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
