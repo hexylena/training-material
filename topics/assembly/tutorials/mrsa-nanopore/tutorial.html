@@ -242,7 +242,7 @@
   "url": "https://training.galaxyproject.org//training-material/topics/assembly/tutorials/mrsa-nanopore/tutorial.html",
   "timeRequired": "PT2H",
   "keywords": "nanopore, assembly, amr",
-  "description": "The questions this  addresses are:\n - How to check the quality of the MinION data?\n - How to perform an assembly with MinION data?\n - What species do I have and what is its sequence type?\n - Which resistance genes are on my genome?\n - Where are the genes located on my genome?\n\n\\nThe objectives are:\n - Assess your data on quality and quantity\n - Assemble a genome\n - Assess your assembly quality\n - Assess presence of anitmicrobial resistance genes\n - Perform a species identification and MLST typing\n - Search for resistance genes on the assembly\n - Find a gene on your genome using Prokka + JBrowse\n\n",
+  "description": "The questions this  addresses are:\n - How to check the quality of the MinION data?\n - How to perform an assembly with MinION data?\n - What species do I have and what is its sequence type?\n - Which resistance genes are on my genome?\n - Where are the genes located on my genome?\n\n\\nThe objectives are:\n - Assess your data on quality and quantity\n - Assemble a genome\n - Assess your assembly quality\n - Assess presence of antimicrobial resistance genes\n - Perform a species identification and MLST typing\n - Search for resistance genes on the assembly\n - Find a gene on your genome using Prokka + JBrowse\n\n",
   "coursePrerequisites": [
     {
       "@type": "CreativeWork",
@@ -379,7 +379,7 @@
             <li><p>Assess your assembly quality</p>
 </li>
             
-            <li><p>Assess presence of anitmicrobial resistance genes</p>
+            <li><p>Assess presence of antimicrobial resistance genes</p>
 </li>
             
             <li><p>Perform a species identification and MLST typing</p>
@@ -613,8 +613,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -665,11 +663,11 @@
 
 <p>In this training you’re going to make an assembly of data produced by
 “Complete Genome Sequences of Eight Methicillin-Resistant
-Staphylococcus aureus Strains Isolated from Patients in
+<em>Staphylococcus aureus</em> Strains Isolated from Patients in
 Japan” from <a class="citation" href="#Hikichi_2019">Hikichi <i>et al.</i> 2019</a> which describes:</p>
 
 <blockquote>
-  <p>Methicillin-resistant Staphylococcus aureus (MRSA) is a major pathogen
+  <p>Methicillin-resistant <em>Staphylococcus aureus</em> (MRSA) is a major pathogen
 causing nosocomial infections, and the clinical manifestations of MRSA
 range from asymptomatic colonization of the nasal mucosa to soft tissue
 infection to fulminant invasive disease. Here, we report the complete
@@ -738,7 +736,7 @@ fastq file.</p>
   <ol>
     <li>Create a new history for this tutorial</li>
     <li>
-      <p><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span>  the files from <a href="https://zenodo.org/record/4534098/files/DRR187567.fastq.bz2">Zenodo</a> or from the shared data library</p>
+      <p><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span>  the files from <a href="https://zenodo.org/record/4534098">Zenodo</a> or from the shared data library</p>
 
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4534098/files/DRR187567.fastq.bz2
 </code></pre></div>      </div>
@@ -840,11 +838,7 @@ fastq file.</p>
 
         <ol>
           <li>What are the 4 main features of each read in a fastq file.</li>
-          <li>
-            <p>What is the name of your first read?</p>
-
-            <p><em>Can’t find it? Read the background information.</em></p>
-          </li>
+          <li>What is the name of your first read?</li>
         </ol>
 
         <blockquote class="solution">
@@ -1609,10 +1603,10 @@ found genes, but it can be used with many more inputs.</p>
                         <h3><i class="fas fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
                         <ul>
                             
-                            <li><p>Nanopore produces fantastic assemblies</p>
+                            <li><p>Nanopore produces fantastic assemblies but with low quality data</p>
 </li>
                             
-                            <li><p>Assembly and annotation with Flye and Prokka is very efficient</p>
+                            <li><p>Annotation with Prokka is very easy</p>
 </li>
                             
                         </ul>
