@@ -145,6 +145,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -154,6 +157,26 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-03/search.html" title="Version 2021-03">2021-03</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2019-06-01/search.html" title="Version 2019-06-01">2019-06-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2019-05-01/search.html" title="Version 2019-05-01">2019-05-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -743,6 +766,23 @@ var tutorials = {
         "level"     : "Intermediate",
         "contributors": "stortebecker, bgruening",
         "entry"      : "        <div class='col-sm-6'>        <div class='card'>        <div class='card-body'>          <h5 class='card-title'>Detection and quantitation of N-termini (degradomics) via N-TAILS</h5>          <h6 class='card-subtitle text-muted'>Proteomics</h6>          <p class='card-text'> </p>                      <p>                        </p>                    <p> <a href='/training-material/hall-of-fame/stortebecker/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/stortebecker' alt='Florian Christoph Sigloch'>Florian Christoph Sigloch</a> <a href='/training-material/hall-of-fame/bgruening/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/bgruening' alt='Björn Grüning'>Björn Grüning</a></p>          <a class='btn btn-primary' href='/training-material/topics/proteomics/tutorials/ntails/tutorial.html'>View Tutorial</a>          </div>          </div>          </div>          "
+      },
+    
+
+       
+      "/topics/proteomics/tutorials/encyclopedia/tutorial.html": {
+        "topic"    : "Proteomics",
+        "title"    : "EncyclopeDIA",
+        "description": "",
+        "question" : "",
+        "objectives"  : "Understand the difference between DDA and DIA methods, Performing quantitative analysis using DIA data, Understand the purpose and benefits of using a Chromatogram Library for detection of peptides, You can use Bloom's Taxonomy to write effective learning objectives",
+        "tags"     : "DIA",
+        "level"     : "",
+        "time_estimation": "6H",
+        "url"      : "/training-material/topics/proteomics/tutorials/encyclopedia/tutorial.html",
+        "level"     : "",
+        "contributors": "emmaleith, subinamehta, jj-umn, pratikdjagtap, timothygriffin",
+        "entry"      : "        <div class='col-sm-6'>        <div class='card'>        <div class='card-body'>          <h5 class='card-title'>EncyclopeDIA</h5>          <h6 class='card-subtitle text-muted'>Proteomics</h6>          <p class='card-text'> </p>                      <p>                          <form method='GET' action='/training-material/search' style='display:inline'><input type='hidden' name='query' value='DIA'><button class='label label-default tutorial_tag' id='DIA' style='background-color: hsl(215, 80.0%, 85%); color: #333; border: 1px solid hsl(215, 80.0%, 45%)' title='Click to show all tutorials with this tag'>DIA</button></form>                        </p>                    <p> <a href='/training-material/hall-of-fame/emmaleith/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/emmaleith' alt='Emma Leith'>Emma Leith</a> <a href='/training-material/hall-of-fame/subinamehta/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/subinamehta' alt='Subina Mehta'>Subina Mehta</a> <a href='/training-material/hall-of-fame/jj-umn/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/jj-umn' alt='James Johnson'>James Johnson</a> <a href='/training-material/hall-of-fame/pratikdjagtap/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/pratikdjagtap' alt='Pratik Jagtap'>Pratik Jagtap</a> <a href='/training-material/hall-of-fame/timothygriffin/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/timothygriffin' alt='Timothy J. Griffin'>Timothy J. Griffin</a></p>          <a class='btn btn-primary' href='/training-material/topics/proteomics/tutorials/encyclopedia/tutorial.html'>View Tutorial</a>          </div>          </div>          </div>          "
       },
     
 
@@ -2973,6 +3013,23 @@ var tutorials = {
     
 
        
+      "/topics/admin/tutorials/ftp/tutorial.html": {
+        "topic"    : "Galaxy Server administration",
+        "title"    : "Enable upload via FTP",
+        "description": "",
+        "question" : "",
+        "objectives"  : "Configure galaxy and install a FTP server., Use an Ansible playbook for this.",
+        "tags"     : "",
+        "level"     : "",
+        "time_estimation": "1h",
+        "url"      : "/training-material/topics/admin/tutorials/ftp/tutorial.html",
+        "level"     : "",
+        "contributors": "lldelisle",
+        "entry"      : "        <div class='col-sm-6'>        <div class='card'>        <div class='card-body'>          <h5 class='card-title'>Enable upload via FTP</h5>          <h6 class='card-subtitle text-muted'>Galaxy Server administration</h6>          <p class='card-text'> </p>                    <p> <a href='/training-material/hall-of-fame/lldelisle/' class='contributor-badge'><img src='https://avatars.githubusercontent.com/lldelisle' alt='Lucille Delisle'>Lucille Delisle</a></p>          <a class='btn btn-primary' href='/training-material/topics/admin/tutorials/ftp/tutorial.html'>View Tutorial</a>          </div>          </div>          </div>          "
+      },
+    
+
+       
       "/topics/admin/tutorials/external-auth/tutorial.html": {
         "topic"    : "Galaxy Server administration",
         "title"    : "External Authentication",
@@ -4180,11 +4237,47 @@ var tutorials = {
 
 function search(idx, q){
 	if(q.length > 2){
-		var results = idx.search(`*${q}*`).map(x => {
-			return tutorials['/' + x.ref.replaceAll(".md", ".html")];
+        var results_partial = idx.search(`*${q}*`),
+            results_exact = idx.search(`${q}`),
+            results_fuzzy = idx.search(`${q}~3`);
+
+        thereMap  = Object.assign({}, ...results_partial.map((x) => ({[x.ref]: x.score})));
+
+        results_exact.forEach(x => {
+            if(thereMap[x.ref] !== undefined){
+                if(thereMap[x.ref] < x.score + 4){
+                    thereMap[x.ref] = x.score + 4
+                }
+            } else {
+                    thereMap[x.ref] = x.score + 4
+            }
+        })
+        results_fuzzy.forEach(x => {
+            if(thereMap[x.ref] !== undefined){
+                if(thereMap[x.ref] < x.score - 2){
+                    thereMap[x.ref] = x.score - 2
+                }
+            } else {
+                    thereMap[x.ref] = x.score - 2
+            }
+        })
+
+        combined_results = Object.getOwnPropertyNames(thereMap);
+        combined_results.sort((a, b) => {
+            if (thereMap[a] > thereMap[b]) {
+                return -1;
+            }
+            if (thereMap[a] < thereMap[b]) {
+                return 1;
+            }
+            return 0;
+        });
+
+		var results_final = combined_results.map(x => {
+			return tutorials['/' + x.replaceAll(".md", ".html")];
 		}).filter(x => x !== undefined);
 
-		$("#results-container").html(results.map(x => x.entry));
+		$("#results-container").html(results_final.map(x => x.entry));
 	}
 }
 
@@ -4222,7 +4315,7 @@ fetch('/training-material/search.json')
         <p>
     The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 </p>
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/baf0bce294a9a04bd6543597a7770438ef7ca0b7">baf0bce294a9a04bd6543597a7770438ef7ca0b7</a></p>
+        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/ef614d213d2585e148d6aafdf296a7be1d95b9fb">ef614d213d2585e148d6aafdf296a7be1d95b9fb</a></p>
     </div>
 </footer>
 
